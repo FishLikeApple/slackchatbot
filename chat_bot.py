@@ -3,8 +3,7 @@ import time
 import re
 from slackclient import SlackClient
 
-SLACK_TOKEN = 'xoxp-1054091500085-1054091500197-1058774627732-1f74a2bc7dbc5c621d88e3a54811447a'
-SLACK_BOT_TOKEN = 'xoxb-1054091500085-1070223311200-DwUkGY1btZ1xcjJVKoKjcVdT'
+SLACK_BOT_TOKEN = 'xoxb-1054091500085-1070223311200-xDt8goyQvfl97QXJBejypCDB'
 
 # instantiate Slack client
 slack_client = SlackClient(SLACK_BOT_TOKEN)
