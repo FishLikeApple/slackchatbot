@@ -3,6 +3,7 @@ import time
 import re
 from slackclient import SlackClient
 
+SLACK_TOKEN = 'xoxp-1054091500085-1054091500197-1058774627732-1f74a2bc7dbc5c621d88e3a54811447a'
 SLACK_BOT_TOKEN = 'xoxb-1054091500085-1070223311200-DwUkGY1btZ1xcjJVKoKjcVdT'
 
 # instantiate Slack client
@@ -57,7 +58,7 @@ def handle_command(command, channel):
         text=response or default_response
     )
 
-if __name__ == "__main__":
+def main():
     if slack_client.rtm_connect(with_team_state=False):
         print("Starter Bot connected and running!")
         # Read bot's user ID by calling Web API method `auth.test`
@@ -69,3 +70,6 @@ if __name__ == "__main__":
             time.sleep(RTM_READ_DELAY)
     else:
         print("Connection failed. Exception traceback printed above.")
+
+if __name__ == "__main__":
+    main()
